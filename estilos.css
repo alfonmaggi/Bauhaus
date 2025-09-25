@@ -1,0 +1,1286 @@
+/* Declaración de las tipografías */
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/Futura.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos de la página y tipografías por defecto */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EBE6E2;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "futura-pt", sans-serif;
+font-weight: 500;
+font-style: normal;
+}
+
+/* Estilos de la barra de navegación */
+.header {
+    background-color: #E8DACD; /* Color de fondo según tu wireframe */
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-b img {
+    height: 40px; /* Tamaño del logo */
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #005AAC;
+}
+
+.nav-icons img {
+    height: 20px;
+    margin-left: 15px;
+}
+/* styles.css (Añade o modifica estas reglas) */
+
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Ajusta la altura según necesites */
+    position: relative;
+    overflow: hidden; /* Para que la imagen no se salga del contenedor */
+}
+
+.intro-image-wrapper {
+    background-image: url('img/home-header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.intro-text-overlay {
+    position: absolute;
+    bottom: 50px; /* Separación de la parte inferior */
+    left: 40p; /* ¡Cambio! Ahora está a 50px del lado izquierdo */
+    
+    max-width: 315px; 
+    
+    /* ¡Cambio! Usamos el color de tu tipografía principal */
+    color: #333; 
+    
+    /* Eliminamos el fondo para que la imagen se vea completamente */
+    background-color: transparent; 
+    padding: 20px;
+}
+
+.intro-text-overlay p {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* fin intro home */
+
+
+/* Contenedor para la sección "¿Qué fue la Bauhaus?" y su imagen */
+.question-section-wrapper {
+    /* Aquí aplicamos el padding lateral para que el texto no esté pegado al borde */
+    padding: 0 80px; 
+    margin-bottom: 50px; /* Espacio debajo de esta sección */
+}
+
+
+/* Estilos de la sección "¿Qué fue la Bauhaus?" (ya existen, solo revisa que estén dentro de .question-section-wrapper) */
+.question-section {
+    display: flex;
+    gap: 40px;
+    margin: 80px 0;
+    align-items: flex-start;
+}
+
+.question-section .column {
+    flex: 1;
+}
+
+.question-section .column h1 {
+    font-size: 4.5em; /* Ajusta este valor para el tamaño deseado */
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* Estilos para la nueva imagen de grupo (de borde a borde) */
+.bauhaus-group-image {
+    width: 100vw; /* Ocupa el 100% del ancho del viewport (ventana del navegador) */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 50px; /* Espacio entre el texto y la imagen */
+    line-height: 0; /* Elimina espacio extra debajo de la imagen */
+}
+
+.bauhaus-group-image img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacio extra que algunos navegadores agregan a las imágenes */
+}
+
+/* Estilos de la sección Relevancia global */
+.relevance-section {
+    margin: 80px 0; /* Aumentamos el margen para separar de otras secciones */
+    padding: 0 80px; /* Agregamos el padding lateral para todo el contenido de la sección */
+}
+
+.relevance-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* Espacio entre la imagen y el texto */
+}
+
+.relevance-content img {
+    max-width: 40%;
+    height: auto;
+}
+
+.relevance-text-wrapper {
+    flex: 1; /* Para que el texto ocupe el espacio restante */
+    padding-left: 20px; /* Padding del texto hacia la derecha */
+}
+
+.relevance-text-wrapper h2 {
+    font-size: 50px; /* El tamaño del título que pediste */
+    font-family: 'Futura', sans-serif; /* Usamos Futura para el título */
+}
+
+/* Estilos de la sección Relevance graphics */
+.relevance-graphics {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.graphic-item {
+    text-align: center;
+}
+
+.graphic-item img {
+    /* Hacemos las imágenes más grandes */
+    height: 250px; /* Definimos una altura fija para que todas sean iguales */
+    width: auto; /* Mantenemos el ancho automático para no distorsionar la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin ser cortada */
+    padding: 20px; /* Padding dentro del borde */
+}
+
+/* Estilos para el texto con borde de "botón" */
+.button-text {
+    border: 1px solid #333; /* Borde negro de 1px */
+    border-radius: 9999px; /* Un valor muy grande para hacer los bordes completamente redondos (tipo medio círculo) */
+    padding: 10px 20px; /* Espaciado interno para que el texto no se pegue a los bordes */
+    background-color: transparent; /* Fondo transparente */
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 15px; /* Espacio entre la imagen y el texto */
+    display: inline-block; /* Para que el padding y el borde funcionen bien */
+}
+
+/* styles.css (Añade estas nuevas reglas) */
+
+/* Estilos para la sección "Obras y diseños en la actualidad" */
+.obras-actualidad-section {
+    padding-top: 80px; /* Un poco de espacio arriba */
+    padding-bottom: 50px;
+}
+
+.content-centered {
+    text-align: center; /* Centra el contenido de texto y el botón */
+    max-width: 800px; /* Limita el ancho del texto para mejor lectura */
+    margin: 0 auto; /* Centra el div en la pantalla */
+    padding: 0 40px; /* Padding para que el texto no se pegue a los bordes */
+}
+
+.content-centered h1 {
+    font-size: 3em; /* Tamaño grande para el título */
+    margin-bottom: 20px;
+}
+
+.content-centered p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Estilos del botón con borde (reutilizamos la lógica del borde) */
+.button-bordered {
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #333; /* Borde negro de 1px */
+    border-radius: 9999px; /* Borde redondeado */
+    padding: 12px 30px; /* Espaciado interno */
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+.button-bordered:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos para el contenedor de la imagen de galería */
+.gallery-image-container {
+    width: 100%;
+    margin-top: 30px; /* Espacio entre el botón y la imagen */
+    text-align: center;
+}
+
+.gallery-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* styles.css (Modifica estas reglas existentes) */
+
+/* Contenedor principal de la sección */
+.historia-section {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    overflow: hidden; /* Evita el scroll horizontal */
+}
+
+/* Contenedor de las dos columnas principales */
+.historia-content-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Alinea los elementos a la parte inferior */
+    padding-left: 80px;
+    position: relative;
+}
+
+/* Estilos de la columna de texto */
+.historia-column.text-column {
+    flex: 1; /* Permite que la columna de texto ocupe el espacio restante */
+    padding-right: 40px;
+}
+
+/* Contenedor del título */
+.historia-title-container {
+    margin-bottom: 20px; /* Ajusta el espacio entre el título y el primer párrafo */
+}
+
+.historia-title-container h1 {
+    font-size: 3.5em; 
+    line-height: 1.1;
+    margin: 0;
+}
+
+.historia-column.text-column p {
+    margin-bottom: 20px; /* Espacio entre los párrafos */
+}
+
+/* Estilos de la columna de la imagen (pegada al borde derecho) */
+.historia-column.image-column {
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+    flex-basis: auto; /* El tamaño de la columna se basa en el contenido */
+    position: relative;
+    margin-right: -80px; /* Desplaza la imagen fuera del padding del contenedor */
+    text-align: right; 
+}
+
+.historia-column.image-column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Asegura que la imagen se vea completa sin recortarse */
+}
+
+/* styles.css (Modifica estas reglas existentes) */
+
+/* Contenedor principal de la línea de tiempo */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 80px;
+}
+
+/* Línea vertical divisora */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Puntos en la línea de tiempo */
+.timeline-point {
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Posiciones de los puntos (mantén estos valores o ajústalos según la altura de tu contenido) */
+.timeline-item:nth-child(1) .timeline-point { top: 0; }
+.timeline-item:nth-child(2) .timeline-point { top: 200px; }
+.timeline-item:nth-child(3) .timeline-point { top: 400px; }
+.timeline-item:nth-child(4) .timeline-point { top: 450px; }
+.timeline-item:nth-child(5) .timeline-point { top: 470px; }
+.timeline-item:nth-child(6) .timeline-point { top: 475px; }
+.timeline-item:nth-child(7) .timeline-point { top: 480px; }
+
+
+/* Item de la línea de tiempo */
+.timeline-item {
+    display: flex;
+    justify-content: center; /* Centra el contenido en la línea */
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Contenido del año e imagen */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    position: relative;
+}
+
+/* Alineación para los elementos impares (lado izquierdo) */
+.timeline-item:nth-child(odd) .timeline-content {
+    left: -25%; /* Mueve el bloque completo 25% a la izquierda de la línea central */
+    text-align: right;
+}
+
+/* Alineación para los elementos pares (lado derecho) */
+.timeline-item:nth-child(even) .timeline-content {
+    left: 25%; /* Mueve el bloque completo 25% a la derecha de la línea central */
+    text-align: left;
+}
+
+/* Contenedor del año e imagen */
+.timeline-year-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.timeline-year-image h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de la imagen (ajuste para que no se recorte) */
+.timeline-image-container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+/* La imagen dentro de su contenedor (¡Clave!) */
+.timeline-image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Efecto de hover para la imagen */
+.timeline-item:hover .timeline-image-container {
+    transform: scale(1.1);
+}
+
+/* Contenedor del texto corto y el extenso */
+.timeline-text-hover {
+    cursor: pointer;
+}
+
+/* Contenido extra para el hover (oculto por defecto) */
+.timeline-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Mostrar el contenido extra en hover */
+.timeline-item:hover .timeline-details {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+/* styles.css (Modifica estas reglas) */
+
+/* Sección de Filosofía y principios */
+.filosofia-section {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    overflow: hidden; 
+}
+
+.filosofia-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    padding-left: 80px; 
+    position: relative;
+}
+
+/* Columna de texto (izquierda) */
+.filosofia-column.text-column {
+    /* La columna de texto se ajustará al espacio restante */
+    flex: 1;
+    padding-right: 40px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilos del título y el párrafo (sin cambios) */
+.filosofia-title-container h2 {
+    font-family: 'Futura', sans-serif; 
+    font-size: 3.5em;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    color: #333;
+}
+.filosofia-column.text-column p {
+    font-family: 'Futura', sans-serif; 
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* styles.css (Modifica estas reglas existentes) */
+
+/* Contenedor de la lista de ítems */
+.principios-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de cada ítem */
+.principio-item {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* ¡CLAVE! Centra verticalmente el texto y el ícono */
+    padding: 10px 0; 
+}
+
+/* Estilos del texto de los ítems */
+.principio-item p {
+    font-family: 'Futura', sans-serif; 
+    font-size: 1.3em; /* Tamaño de letra más grande */
+    color: #005AAC; /* Tono azul */
+    margin: 0;
+}
+
+/* Estilos de los íconos */
+.principio-icon-container {
+    width: 24px; 
+    height: 24px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.principio-icon-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos de las líneas divisorias */
+.principio-divider {
+    height: 1px;
+    background-color: #005AAC;
+    margin: 0;
+}
+
+/* Columna de la imagen (derecha) */
+.filosofia-column.image-column {
+    /* ¡CLAVE! El ancho se define por el tamaño de la imagen */
+    flex: 0 0 auto; 
+    position: relative;
+    right: -30px; /* Desplaza la imagen fuera del padding del contenedor */
+    text-align: right;
+    
+    /* El siguiente bloque de código asegura que la imagen se vea completa */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.filosofia-column.image-column img {
+    max-width: 100%; /* La imagen no se excederá del ancho de su contenedor */
+    height: auto;
+    display: block;
+    object-fit: contain; 
+}
+/* styles.css (Añade estas reglas al final del archivo) */
+
+/* Estilos para el header de la página de Diseño Gráfico */
+.graphic-design-header {
+    width: 100%;
+    /* margin-top: -XXpx; si es necesario para pegarla a la nav bar */
+}
+
+.graphic-design-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+/* styles.css (Modifica estas reglas existentes) */
+
+/* Contenedor de la sección de contenido de dos columnas */
+.graphic-content-section {
+    padding: 80px;
+    /* QUITAMOS EL COLOR DE FONDO */
+    /* background-color: #f7f5f2; */ 
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* ¡CLAVE! Centra los elementos a lo largo del eje transversal (verticalmente) */
+    gap: 40px;
+}
+
+/* Estilos de las columnas */
+.content-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Estilos de la primera columna (texto e imagen) */
+.left-column p {
+    margin-bottom: 20px;
+}
+
+.left-column img {
+    width: 80%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Estilos de las imágenes */
+.content-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Ajustes específicos para la imagen de la columna derecha */
+.right-column {
+    flex: 0.8; 
+    max-width: 550px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* styles.css (Añade estas reglas al final del archivo) */
+
+/* Sección de Relevancia y Aportes */
+.graphic-relevance-section {
+    padding: 80px;
+}
+
+.relevance-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* ¡CLAVE! Estira ambas columnas para que tengan la misma altura */
+    gap: 40px;
+}
+
+/* Columnas de la sección */
+.relevance-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Columna de la imagen */
+.relevance-column.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Columna del texto */
+.relevance-column.text-column {
+    justify-content: center; /* Centra el contenido verticalmente si la imagen es más alta */
+}
+
+/* Modifica la sección de Relevancia para usar las nuevas clases */
+.relevance-column.text-column h2 {
+    font-family: 'Futura', sans-serif; /* Confirma que usa Futura */
+    font-size: 3.5em;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+}
+
+.relevance-column.text-column p {
+    font-family: 'Raleway', sans-serif; /* Confirma que usa Raleway */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* styles.css (Añade estas reglas al final del archivo) */
+
+/* Sección de Impacto y Legado */
+.graphic-impact-section {
+    padding: 80px 0; /* Padding superior e inferior, sin padding lateral */
+}
+
+.impact-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido en el contenedor */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 40px;
+}
+
+/* Columna de texto */
+.impact-column.text-column {
+    flex: 1;
+    padding: 0 40px; /* Padding lateral */
+}
+
+/* Estilos del párrafo */
+.impact-column.text-column p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Columna de la imagen */
+.impact-column.image-column {
+    flex: 1;
+}
+
+/* Estilos de la imagen */
+.impact-column.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* styles.css (Modifica estas reglas existentes) */
+
+/* Sección de 3 columnas */
+.graphic-topics-section {
+    padding: 80px;
+}
+
+.topics-container {
+    display: flex;
+    justify-content: center; /* ¡CLAVE! Centra las columnas horizontalmente */
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Estilos de cada columna */
+.topic-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+}
+
+/* Contenedor de la imagen y la descripción */
+.topic-image-container {
+    position: relative;
+    overflow: hidden;
+    /* QUITAMOS EL MARGIN */
+    /* margin: 0 auto; */
+}
+
+/* Estilos de las imágenes */
+.topic-image-container img {
+    height: 250px;
+    width: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 auto; /* ¡CLAVE! Centra la imagen dentro de su contenedor */
+}
+
+/* Estilos del texto que aparece al hacer hover */
+.topic-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #005AAC ;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto Hover: muestra el texto y agranda la imagen */
+.topic-image-container:hover .topic-description {
+    transform: translateY(0);
+}
+.topic-image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilos del subtítulo */
+.topic-title {
+    font-family: 'Futura', sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* styles.css (Añade estas reglas al final del archivo) */
+
+/* Sección de Obras más Relevantes */
+.graphic-works-section {
+    padding: 80px;
+}
+
+/* Estilos del título centrado */
+.works-title-container {
+    text-align: left;
+    margin-bottom: 50px;
+}
+.works-title-container h2 {
+    font-family: 'Futura', sans-serif;
+    font-size: 3.5em;
+    color: #333;
+}
+
+/* Contenedor de las 4 columnas */
+.works-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Estilos de cada columna de obra */
+.work-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 250px; /* Limita el ancho de cada columna para que se vean bien en fila */
+}
+
+/* Estilos de la tarjeta para la animación de volteo */
+.flip-card {
+    background-color: transparent;
+    width: 250px; /* Mismo ancho que la columna */
+    height: 350px; /* Altura de la tarjeta */
+    perspective: 1000px; /* Efecto 3D para la animación */
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Permite que el reverso se vea */
+}
+
+/* Animación de volteo al hacer hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Estilos para el frente y el reverso de la tarjeta */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Oculta el lado opuesto */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.flip-card-back {
+    background-color: #005AAC; /* Color de fondo para el reverso */
+    color: #fff;
+    transform: rotateY(180deg);
+}
+.flip-card-back p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Estilos de las imágenes en el frente de la tarjeta */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos de los textos de las obras */
+.work-caption {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+/* styles.css (Modifica estas reglas existentes) */
+
+/* Sección de Legado - NUEVA ESTRUCTURA */
+.graphic-legacy-section {
+    padding: 80px 0;
+}
+
+.legacy-container-new {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 0;
+}
+
+.legacy-column-new {
+    display: flex;
+    min-height: 450px;
+}
+
+/* Primera columna (texto y botón) */
+.legacy-column-new.text-column-new {
+    flex: 1; 
+    background-color: #005AAC;
+    border-top-right-radius: 200px;
+    /* ¡CLAVE! Borde inferior derecho redondeado */
+    border-bottom-right-radius: 200px; 
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+/* Segunda columna (imagen) */
+.legacy-column-new.image-column-new {
+    flex: 1.5; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden; 
+    border-top-left-radius: 200px; 
+    /* ¡CLAVE! Borde inferior izquierdo redondeado */
+    border-bottom-left-radius: 200px;
+}
+
+/* Aseguramos que la imagen se adapte al borde redondeado */
+.legacy-column-new.image-column-new img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-top-left-radius: 200px; 
+    /* ¡CLAVE! La imagen también necesita el borde redondeado */
+    border-bottom-left-radius: 200px; 
+}
+
+/* Resto de los estilos se mantienen igual */
+.text-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.text-content-wrapper h2 {
+    font-family: 'Futura', sans-serif;
+    font-size: 3.5em;
+    line-height: 1.1;
+    color: #EBE6E2;
+    margin-bottom: 20px;
+}
+
+.text-content-wrapper p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #EBE6E2;
+    margin-bottom: 30px;
+}
+
+.legacy-button {
+    background-color: transparent;
+    border: 1px solid #EBE6E2;
+    color: #EBE6E2;
+    border-radius: 999px;
+    padding: 12px 30px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.legacy-button:hover {
+    background-color: #EBE6E2;
+    color: #005AAC;
+}
+
+/* Principales Figuras Section */
+.graphic-figures-section {
+    padding: 80px 0;
+}
+
+.figures-container {
+    display: flex;
+    align-items: stretch; /* Makes both columns the same height */
+    margin: 0 80px; /* Optional: adds a little margin on the sides */
+}
+
+/* Base Styles for both Columns */
+.figures-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* First Column: Text and Buttons */
+.figures-column.text-column {
+    flex: 1; /* Makes this column take up 1 part of the available space */
+    justify-content: center; /* Aligns content vertically in the center */
+    align-items: center; /* Aligns content horizontally in the center */
+    padding: 20px;
+}
+
+.text-content {
+    text-align: center;
+}
+
+.text-content h2 {
+    font-family: 'Futura', sans-serif;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.figure-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #005AAC;
+    border-radius: 999px;
+    color: #005AAC;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.figure-button span {
+    font-weight: bold;
+}
+
+.figure-button img {
+    height: 15px;
+    width: auto;
+}
+
+.figure-button:hover {
+    background-color: #005AAC;
+    color: #fff;
+}
+
+.figure-button:hover img {
+    filter: brightness(0) invert(1); /* Changes the icon color on hover */
+}
+
+/* Second Column: Image */
+.figures-column.image-column {
+    flex: 1.5; /* Makes this column 1.5 times wider than the first one */
+}
+
+.figures-column.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Sección de Herbert Bayer */
+.graphic-bayer-section {
+    padding: 80px 0;
+}
+
+.bayer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 80px;
+    gap: 40px;
+}
+
+/* Estilos de las columnas */
+.bayer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Columna de texto */
+.bayer-column.text-column {
+    flex: 1;
+    justify-content: center;
+}
+
+.bayer-column.text-column p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Columna de imagen */
+.bayer-column.image-column {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+}
+
+.bayer-column.image-column img {
+    /* ¡CLAVE! Aumenta el ancho de la imagen */
+    width: 100%;
+    /* ¡CLAVE! Aumenta el ancho máximo de la imagen para que se vea más grande */
+    max-width: 500px; 
+    height: auto;
+    object-fit: contain;
+    margin: 20px 0;
+}
+
+/* Estilos del título y subtítulo de la imagen */
+.image-title {
+    font-family: 'Futura', sans-serif;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.image-subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* styles.css (Añade estas reglas al final del archivo) */
+
+footer {
+    position: relative;
+    background-color: #EBE6E2; /* Color de fondo del footer */
+    padding-top: 50px; /* Espacio para la línea y el contenido */
+}
+
+.footer-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #005AAC; /* Color de la línea */
+}
+
+/* Resto de los estilos del footer */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+
+/* ... Estilos para enlaces, formulario, etc. ... */
+
+/* Contenido del footer (logo, secciones y newsletter) */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 80px;
+}
+
+/* Columna del logo y las secciones */
+.footer-sections {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    margin-right: 40px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.footer-logo img {
+    height: 100%;
+    width: auto;
+}
+
+.footer-links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.footer-links-row {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-link {
+    font-family: 'Futura', sans-serif;
+    font-size: 1em;
+    color: #005AAC;
+    text-decoration: none;
+}
+
+/* Sección del Newsletter */
+.footer-newsletter {
+    flex-shrink: 0;
+}
+
+.newsletter-text {
+    font-family: 'Futura', sans-serif;
+    font-size: 0.9em;
+    color: #005AAC;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.newsletter-input {
+    padding: 8px 12px;
+    border: 1px solid #005AAC;
+    border-radius: 999px;
+    background-color: transparent;
+    color: #005AAC;
+    font-family: 'Futura', sans-serif;
+}
+.newsletter-input::placeholder {
+    color: #005AAC;
+    opacity: 0.7;
+}
+
+.newsletter-button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #005AAC;
+    color: #f7f5f2;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: 'Futura', sans-serif;
+}
+
+.terms-checkbox {
+    font-family: 'Futura', sans-serif;
+    font-size: 0.8em;
+    color: #005AAC;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Imagen final del footer */
+.footer-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.footer-image-container img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
