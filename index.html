@@ -66,30 +66,68 @@
         </div>
     </div>
     <div class="relevance-graphics">
-    <div class="graphic-item">
-        <img src="img/graphic-industrial.png" alt="Graphic Industrial">
-        <p class="button-text">Diseño Industrial</p>
-    </div>
-    <div class="graphic-item">
-        <img src="img/graphic-graphic.png" alt="Graphic Graphic">
-        <p class="button-text">Diseño Gráfico</p>
-    </div>
-    <div class="graphic-item">
-        <img src="img/graphic-architecture.png" alt="Graphic Architecture">
-        <p class="button-text">Arquitectura</p>
-    </div>
+    
+        <a href="disenio_industrial.html" class="graphic-link">
+            <div class="graphic-item">
+                <img src="img/graphic-industrial.png" alt="Graphic Industrial">
+                <p class="button-text">Diseño Industrial</p>
+            </div>
+        </a>
+        
+        <a href="disenio_grafico.html" class="graphic-link">
+            <div class="graphic-item">
+                <img src="img/graphic-graphic.png" alt="Graphic Graphic">
+                <p class="button-text">Diseño Gráfico</p>
+            </div>
+        </a>
+        
+        <a href="arquitectura.html" class="graphic-link">
+            <div class="graphic-item">
+                <img src="img/graphic-architecture.png" alt="Graphic Architecture">
+                <p class="button-text">Arquitectura</p>
+            </div>
+        </a>
+        
+    </div> 
 </div>
+</div> </div> 
 <section id="obras-actualidad" class="section obras-actualidad-section">
-    <div class="content-centered">
-        <h1>Obras y diseños en la actualidad</h1>
-        <p>Las obras y diseños de la Bauhaus mantienen una gran relevancia, ya que sentaron las bases del diseño moderno. Su enfoque en la funcionalidad y la estética simple sigue influyendo en la arquitectura, el mobiliario y el diseño gráfico contemporáneo.</p>
-        <button class="button-bordered">Explorá</button>
+    
+    <div class="obras-actualidad-text-wrapper">
+        <div class="content-centered">
+            <h1>Obras y diseños en la actualidad</h1>
+            <p>Las obras y diseños de la Bauhaus mantienen una gran relevancia, ya que sentaron las bases del diseño moderno. Explorá algunas de las piezas más icónicas que aún influyen en el diseño contemporáneo.</p>
+        </div>
     </div>
-    <div class="gallery-image-container">
-        <img src="img/obras-actualidad.png" alt="Obras de la Bauhaus en la actualidad">
+    
+    <div class="carousel-container-3d">
+        <div id="carousel" class="carousel-track">
+            <figure class="carousel-item active" data-index="0"> 
+                <img src="img/obra-actualidad-1.png" alt="Silla Wassily, Marcel Breuer">
+            </figure>
+            <figure class="carousel-item" data-index="1">
+                <img src="img/obras_actualidad2.png" alt="Lámpara Wagenfeld">
+            </figure>
+            <figure class="carousel-item" data-index="2">
+                <img src="img/obra-actualidad-3.png" alt="Edificio Bauhaus Dessau">
+            </figure>
+            <figure class="carousel-item" data-index="3">
+                <img src="img/obra-actualidad-4.png" alt="Tetera de Marianne Brandt">
+            </figure>
+            <figure class="carousel-item" data-index="4">
+                <img src="img/obras_actualidad5.png" alt="Tipografía Universal, Bayer">
+            </figure>
+        </div>
+
+        <div class="controls">
+            <button id="prev" class="carousel-control-btn">←</button>
+            <button id="next" class="carousel-control-btn">→</button>
+        </div>
+    </div>
+    <div class="ver-mas-container">
+        <a href="galeria.html" class="ver-mas-btn">Ver más</a>
     </div>
 </section>
-</div>
 
   <section id="historia-acontecimientos" class="section historia-section">
     <div class="historia-content-columns">
@@ -338,6 +376,6 @@
         <img src="img/bauhaus-footer.png" alt="Imagen final del footer">
     </div>
 </footer>
-
+<script src="carousel.js"></script>
 </body>
 </html>

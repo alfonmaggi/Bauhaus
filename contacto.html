@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Bauhaus</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Futura&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo-b">
+                <img src="img/logo-b.png" alt="Logo Bauhaus">
+            </a>
+            <ul class="nav-list">
+                <li><a href="disenio_industrial.html">Diseño industrial</a></li>
+                <li><a href="disenio_grafico.html">Diseño gráfico</a></li>
+                <li><a href="arquitectura.html">Arquitectura</a></a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><img src="img/lupa.png" alt="Buscar"></a>
+                <a href="#"><img src="img/usuario.png" alt="Usuario"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-header">
+            <img src="img/imagen-contacto-header.png" alt="Imagen principal de la sección Contacto">
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-grid">
+                
+                <div class="contact-form-container">
+                    
+                    <h2 class="contact-title">¡Nos encantaría escucharte!</h2>
+                    
+                    <p class="contact-intro-text">
+                        Si tienes alguna pregunta, sugerencia o simplemente deseas contactar con el equipo de Bauhaus, por favor, completa el siguiente formulario. Nos pondremos en contacto contigo a la brevedad.
+                    </p>
+                    
+                    <form action="#" method="POST" class="contact-form">
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <div class="contact-image-container">
+                    <img src="img/imagen-contacto-lateral.png" alt="Imagen decorativa de la sección Contacto" class="contact-side-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-divider"></div>
+    <div class="footer-container">
+        <div class="footer-sections">
+            <div class="footer-logo">
+                <img src="img/logo-b.png" alt="Logo de la Bauhaus">
+            </div>
+            <div class="footer-links-container">
+                <div class="footer-links-row">
+                    <a href="#" class="footer-link">Diseño industrial</a>
+                    <a href="#" class="footer-link">Diseño grafico</a>
+                    <a href="#" class="footer-link">Arquitectura</a>
+                </div>
+                <div class="footer-links-row">
+                    <a href="#" class="footer-link">Galeria</a>
+                    <a href="#" class="footer-link">Catalogo</a>
+                    <a href="#" class="footer-link">Contacto</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-newsletter">
+            <p class="newsletter-text">Subscribite a nuestra newsletter para <br> tener acceso a nueva info semanal.</p>
+            <form class="newsletter-form">
+                <div class="form-row">
+                    <input type="email" placeholder="Mail" class="newsletter-input">
+                    <button type="submit" class="newsletter-button">Enviar</button>
+                </div>
+                <label class="terms-checkbox">
+                    <input type="checkbox">
+                    Acepto los terminos y condiciones
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-image-container">
+        <img src="img/bauhaus-footer.png" alt="Imagen final del footer">
+    </div>
+</footer>
+
+    </body>
+</html>
